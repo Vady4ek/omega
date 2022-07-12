@@ -9,7 +9,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.min.css">
-    <script type="text/javascript" src="js/main.js" defer></script>
+    <script type="text/javascript" src="js/swiper.js" defer></script>
+    <script type="text/javascript" src="js/cards.js" defer></script>
     <title>Omega</title>
 </head>
 
@@ -19,8 +20,7 @@
             <div class="container">
                 <div class="header__inner">
                     <div class="header__info">
-                        <div class="header__name">Hello,</div>
-                        <div class="header__label">Bryce Turner</div>
+                        <div class="header__name">Bank Cards</div>
                     </div>
                     <a class="header__user" href="#">
                         <img src="images/avatar.png" alt="avatar">
@@ -29,125 +29,67 @@
             </div>
         </header>
         <main class="main">
-            <div class="main__card card">
+            <div class="cards">
                 <div class="container">
-                    <a class="card__inner" href="cards.html">
-                        <img class="card__background" src="images/card-1.png" alt="card">
-                        <div class="card__balance">$1.924,35</div>
-                        <div class="card__bottom">
-                            <div class="card__info">
-                                <div class="card__code">5489 7654 3210 7894</div>
-                                <div class="card__date">04/24</div>
+                    <div class="cards__balance balance">
+                        <div class="balance__label">Balance</div>
+                        <div class="balance__value">$1.924,35</div>
+                    </div>
+                    <div class="cards__slider swiper">
+                        <div class="cards__wrapper swiper-wrapper" id="cards-wrapper">
+                            <div class="cards__slide swiper-slide">
+                                <div class="cards__content card">
+                                    <div class="card__inner card__inner_vertical">
+                                        <img class="card__background" src="images/card-vertical-1.png" alt="card">
+                                        <div class="card__bottom card__bottom_rotated">
+                                            <div class="card__infro">
+                                                <div class="card__code card__code_big">5489 7654 3210 7894</div>
+                                                <div class="card__date card__date_big">04/24</div>
+                                            </div>
+                                            <div class="card__logo card__logo_big">
+                                                <img src="images/mastercard.svg" alt="mastercard">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="card__logo">
-                                <img src="images/mastercard.svg" alt="mastercard">
+                            <div class="cards__slide swiper-slide">
+                                <div class="cards__content card">
+                                    <div class="card__inner card__inner_vertical">
+                                        <img class="card__background" src="images/card-vertical-2.png" alt="card">
+                                        <div class="card__bottom card__bottom_rotated">
+                                            <div class="card__infro">
+                                                <div class="card__code card__code_big">0192 1029 1929 1023</div>
+                                                <div class="card__date card__date_big">01/25</div>
+                                            </div>
+                                            <div class="card__logo card__logo_big">
+                                                <img src="images/mastercard.svg" alt="mastercard">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="cards__slide swiper-slide">
+                                <div class="cards__content card">
+                                    <div class="card__inner card__inner_vertical">
+                                        <img class="card__background" src="images/card-vertical-1.png" alt="card">
+                                        <div class="card__bottom card__bottom_rotated">
+                                            <div class="card__info">
+                                                <div class="card__code card__code_big">9201 9211 0567 0238</div>
+                                                <div class="card__date card__date_big">02/23</div>
+                                            </div>
+                                            <div class="card__logo card__logo_big">
+                                                <img src="images/mastercard.svg" alt="mastercard">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </a>
-                </div>
-            </div>
-            <div class="functions">
-                <div class="container">
-                    <div class="functions__items">
-                        <div class="functions__item">
-                            <a class="functions__image" href="analyze.html">
-                                <img src="images/analyze.png" alt="analyze">
-                            </a>
-                            <a class="functions__header" href="analyze.html">Analyze</a>
-                        </div>
-                        <div class="functions__item">
-                            <a class="functions__image" href="#">
-                                <img src="images/calendar.png" alt="calendar">
-                            </a>
-                            <a class="functions__header" href="#">Calendar</a>
-                        </div>
-                        <div class="functions__item">
-                            <a class="functions__image" href="#">
-                                <img src="images/document.png" alt="document">
-                            </a>
-                            <a class="functions__header" href="#">Document</a>
-                        </div>
-                        <div class="functions__item">
-                            <a class="functions__image" href="#">
-                                <img src="images/collect.png" alt="collect">
-                            </a>
-                            <a class="functions__header" href="#">Collect</a>
-                        </div>
+                        <div class="cards__pagination swiper-pagination"></div>
                     </div>
                 </div>
             </div>
-            <section class="transactions">
-                <div class="container">
-                    <div class="transactions__inner">
-                        <div class="transactions__top">
-                            <h2 class="transactions__header">Transaction details</h2>
-                            <a class="transactions__link" href="#">View All</a>
-                        </div>
-                        <div class="transactions__items">
-                            <a class="transactions__item" href="#">
-                                <div class="transactions__image">
-                                    <img src="images/ball.png" alt="logo">
-                                </div>
-                                <div class="transactions__info">
-                                    <div class="transactions__info-block">
-                                        <h3 class="transactions__name">Dribbble</h3>
-                                        <div class="transactions__time">13 jan 22</div>
-                                    </div>
-                                    <div class="transactions__info-block">
-                                        <div class="transactions__name">-$102,24</div>
-                                        <div class="transactions__time">3:24 PM</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="transactions__item" href="#">
-                                <div class="transactions__image">
-                                    <img src="images/amazon.png" alt="logo">
-                                </div>
-                                <div class="transactions__info">
-                                    <div class="transactions__info-block">
-                                        <h3 class="transactions__name">Amazon Shopping</h3>
-                                        <div class="transactions__time">12 jan 22</div>
-                                    </div>
-                                    <div class="transactions__info-block">
-                                        <div class="transactions__name">-$32.24</div>
-                                        <div class="transactions__time">2:35 PM</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="transactions__item" href="#">
-                                <div class="transactions__image">
-                                    <img src="images/youtube.png" alt="logo">
-                                </div>
-                                <div class="transactions__info">
-                                    <div class="transactions__info-block">
-                                        <h3 class="transactions__name">YouTube TV</h3>
-                                        <div class="transactions__time">9 jan 22</div>
-                                    </div>
-                                    <div class="transactions__info-block">
-                                        <div class="transactions__name">-$20</div>
-                                        <div class="transactions__time">6:10 PM</div>
-                                    </div>
-                                </div>
-                            </a>
-                            <a class="transactions__item" href="#">
-                                <div class="transactions__image">
-                                    <img src="images/paypal.png" alt="logo">
-                                </div>
-                                <div class="transactions__info">
-                                    <div class="transactions__info-block">
-                                        <h3 class="transactions__name">Paypal</h3>
-                                        <div class="transactions__time">7 jan 22</div>
-                                    </div>
-                                    <div class="transactions__info-block">
-                                        <div class="transactions__name">-$80</div>
-                                        <div class="transactions__time">7:00 PM</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
             <nav class="navigation">
                 <div class="navigation__container container">
                     <div class="navigation__inner">

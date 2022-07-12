@@ -9,75 +9,46 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.min.css">
-    <script type="text/javascript" src="js/main.js" defer></script>
+    <script type="text/javascript" src="js/chart.js" defer></script>
+    <script type="text/javascript" src="js/analyze.js" defer></script>
     <title>Omega</title>
 </head>
 
 <body>
     <div class="wrapper">
-        <header class="header">
+        <header class="header header_analyze">
             <div class="container">
-                <div class="header__inner">
-                    <div class="header__info">
-                        <div class="header__name">Hello,</div>
-                        <div class="header__label">Bryce Turner</div>
-                    </div>
-                    <a class="header__user" href="#">
-                        <img src="images/avatar.png" alt="avatar">
+                <div class="header__inner header__inner_centered">
+                    <a class="header__link" href="index.html">
+                        <img src="images/arrow.svg" alt="arrow">
                     </a>
+                    <div class="header__info">
+                        <div class="header__name header__name_small">Analyze</div>
+                    </div>
                 </div>
             </div>
         </header>
         <main class="main">
-            <div class="main__card card">
+            <div class="chart">
                 <div class="container">
-                    <a class="card__inner" href="cards.html">
-                        <img class="card__background" src="images/card-1.png" alt="card">
-                        <div class="card__balance">$1.924,35</div>
-                        <div class="card__bottom">
-                            <div class="card__info">
-                                <div class="card__code">5489 7654 3210 7894</div>
-                                <div class="card__date">04/24</div>
-                            </div>
-                            <div class="card__logo">
-                                <img src="images/mastercard.svg" alt="mastercard">
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="functions">
-                <div class="container">
-                    <div class="functions__items">
-                        <div class="functions__item">
-                            <a class="functions__image" href="analyze.html">
-                                <img src="images/analyze.png" alt="analyze">
-                            </a>
-                            <a class="functions__header" href="analyze.html">Analyze</a>
-                        </div>
-                        <div class="functions__item">
-                            <a class="functions__image" href="#">
-                                <img src="images/calendar.png" alt="calendar">
-                            </a>
-                            <a class="functions__header" href="#">Calendar</a>
-                        </div>
-                        <div class="functions__item">
-                            <a class="functions__image" href="#">
-                                <img src="images/document.png" alt="document">
-                            </a>
-                            <a class="functions__header" href="#">Document</a>
-                        </div>
-                        <div class="functions__item">
-                            <a class="functions__image" href="#">
-                                <img src="images/collect.png" alt="collect">
-                            </a>
-                            <a class="functions__header" href="#">Collect</a>
+                    <div class="chart__top">
+                        <div class="chart__selected" id="select">All</div>
+                        <div class="chart__options" id="options">
+                            <div class="chart__option" data-option="0">All</div>
+                            <div class="chart__option" data-option="1">Jan - May</div>
+                            <div class="chart__option" data-option="2">May - Sep</div>
+                            <div class="chart__option" data-option="3">Sep - Dec</div>
                         </div>
                     </div>
+                    <canvas class="chart__body" id="myChart"></canvas>
                 </div>
             </div>
             <section class="transactions">
                 <div class="container">
+                    <div class="transactions__balance balance">
+                        <div class="balance__label">Total balance</div>
+                        <div class="balance__value">$1.924,35</div>
+                    </div>
                     <div class="transactions__inner">
                         <div class="transactions__top">
                             <h2 class="transactions__header">Transaction details</h2>
